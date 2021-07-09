@@ -1,0 +1,50 @@
+{
+  "product": "uu_jokes_maing01",
+  "version": "0.1.0",
+  "license": "License Commercial",
+  "description": {
+    "en": "",
+    "cs": ""
+  },
+  "devkit": {
+    "development": {
+      "appBoxLocationUri": "----- VALUE REQUIRED -----",
+      "appDeploymentUri": null
+    }
+  },
+  "uu_jokes_maing01-hi": {
+    "componentList": [
+      {
+        "code": "UuJokes.Router.MyPage",
+        "name": "MyPage",
+        "tagList": [
+          "UuJokes",
+          "Router",
+          "MyPage"
+        ],
+        "docCode": "UuJokesRouterMyPage",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<UuJokes.Router.MyPage />"
+      },
+      {
+        "code": "UuJokes.Routes.MyPage",
+        "name": "MyPage",
+        "tagList": [
+          "UuJokes",
+          "Routes",
+          "MyPage"
+        ],
+        "docCode": "UuJokesRoutesMyPage",
+        "desc": "",
+        "icon": "",
+        "imageUri": "",
+        "uuEccReady": false,
+        "template": "<UuJokes.Routes.MyPage />"
+      }
+    ]
+  },
+  "uu_jokes_maing01-server": {}
+}
