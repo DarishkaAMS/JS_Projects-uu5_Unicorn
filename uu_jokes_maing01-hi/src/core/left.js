@@ -27,8 +27,11 @@ export const Left = createVisualComponent({
   render(props) {
     //@@viewOn:private
     const items = [
-      { id: "home", href: "home", content: <UU5.Bricks.Lsi lsi={Lsi.left.home} />},
-      { id: "MyPage", href: "MyPage", content: <UU5.Bricks.Lsi lsi={Lsi.left.MyPage} /> },
+      { id: "home", href: "home", content: <UU5.Bricks.Lsi lsi={Lsi.left.home} />,
+        onClick : props.setInitialActiveItemId("home")
+      },
+      { id: "mypage", href: "MyPage", content: <UU5.Bricks.Lsi lsi={Lsi.left.MyPage} />,
+        onClick : props.setInitialActiveItemId("mypage")},
     ];
     //@@viewOff:private
 

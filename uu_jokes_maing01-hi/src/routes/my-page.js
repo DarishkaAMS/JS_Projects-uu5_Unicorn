@@ -37,7 +37,8 @@ export const MyPage = createVisualComponent({
     return currentNestingLevel ? (
       <div {...attrs}>
         <div>Visual Component {STATICS.displayName}</div>
-        <div>I like it</div>
+        <br/>
+        <div> It is amazing </div>
         {UU5.Utils.Content.getChildren(props.children, props, STATICS)}
       </div>
     ) : null;

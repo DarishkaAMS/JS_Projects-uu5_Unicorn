@@ -44,7 +44,7 @@ export const SpaAuthenticated = createVisualComponent({
 
   render(props) {
     //@@viewOn:private
-    let [initialActiveItemId] = useState(() => {
+    let [initialActiveItemId, setInitialActiveItemId] = useState(() => {
       let url = UU5.Common.Url.parse(window.location.href);
       return url.useCase || DEFAULT_USE_CASE;
     });
@@ -63,7 +63,7 @@ export const SpaAuthenticated = createVisualComponent({
           bottom={<Bottom />}
           type={3}
           displayedLanguages={["cs", "en"]}
-          left={<Left />}
+          left={<Left setInitialActiveItemId={setInitialActiveItemId} />}
           leftWidth="!xs-300px !s-300px !m-288px !l-288px !xl-288px"
           leftFixed
           leftRelative="m l xl"
@@ -77,7 +77,7 @@ export const SpaAuthenticated = createVisualComponent({
           <Plus4U5.App.MenuConsumer>
             {({ setActiveItemId }) => {
               let handleRouteChanged = ({ useCase, parameters }) => setActiveItemId(useCase || DEFAULT_USE_CASE);
-              return <UU5.Common.Router routes={ROUTES} controlled={false} onRouteChanged={handleRouteChanged} />;
+              return <UU5.Common.Router routes={ROUTES} controlled={false} />;
             }}
           </Plus4U5.App.MenuConsumer>
         </Plus4U5.App.Page>
